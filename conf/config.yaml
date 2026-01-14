@@ -1,0 +1,38 @@
+# config.yaml
+
+# learning parameters
+learning:
+  lr: 0.001  # 学习率
+  epochs: 256  # 训练轮数
+  batch_size: 128  # 批处理大小
+  log_interval: 100  # 打印间隔
+  test_interval: 5  # 测试间隔
+  save_dir: "snapshot_test"  # 保存模型路径
+  early_stopping: 1000  # 早停
+  save_best: True  # 是否保存最优模型
+  snapshot: null  #加载预训练模型
+
+# model parameters
+model:
+  dropout: 0.7  # 随机失活比例
+  max_norm: 3.0  # 最大范数
+  embedding_dim: 100  # 词向量维度
+  filter_num: 100  # 卷积核数量
+  filter_sizes: "3,4,5" # 保持字符串形式，方便后续解析
+  static: False  # 是否使用静态词向量
+  non_static: False  # 是否使用非静态词向量
+  multichannel: False  # 是否使用多通道词向量
+  pretrained_name: "sgns.zhihu.word"  # 预训练词向量文件名
+  pretrained_path: "pretrained"  # 预训练词向量路径
+
+# device settings
+device:
+  id: 1 # 使用 'id' 避免与 Python 内置的 'device' 变量冲突
+
+
+# data settings
+data:
+  data_path: '/opt/nas/p/lws/tx_code/liweishan/emo_analy/chinese_text_cnn/en_data' #数据集路径
+  vocabs_dir: 'en_vocabs'  # 词表路径
+  tokenizer: 'english'  # 分词器
+
