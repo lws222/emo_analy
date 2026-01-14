@@ -1,0 +1,5 @@
+python 3.11
+torch 2.5.1
+numpy 1.26.4
+jieba 0.42.1
+nltk 3.9.1
